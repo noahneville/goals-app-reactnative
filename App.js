@@ -4,8 +4,9 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>This is my first React Native app!</Text>
-      <Text>Adding a second child component.</Text>
+      <Text style={styles.testText}>This is my first React Native app!</Text>
+      <Text style={styles.testText}>Adding a second child component.</Text>
+      <Text>And another one</Text>
       {/* <StatusBar style="auto" /> */}
       <Button title='Tap me!' />
     </View>
@@ -18,5 +19,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  testText: {
+    margin: 16, 
+    borderWidth: 2, 
+    borderColor: 'blue',
+    padding: 16,
   },
 });
