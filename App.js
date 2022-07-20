@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { StyleSheet, View, Button, FlatList } from 'react-native';
 import GoalInput from './components/GoalInput';
 import GoalItem from './components/GoalItem';
+import { StatusBar } from 'expo-status-bar'
 
 export default function App() {
   const [modalIsVisible, setModalIsVisible] = useState(false);
@@ -37,6 +38,8 @@ export default function App() {
   }
 
   return (
+    <>
+    <StatusBar style="light"/>
     <View style={styles.appContainer}>
       <Button 
         title='Add New Goal' 
@@ -68,6 +71,7 @@ export default function App() {
         />
       </View>
     </View>
+    </>
   );
 }
 
@@ -76,6 +80,7 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     paddingHorizontal: 16,
     flex: 1,
+    backgroundColor: '#1e085a'
   },
   goalsContainer: {
     flex: 5,
